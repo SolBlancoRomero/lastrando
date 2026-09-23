@@ -3,111 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lastrando | Próximamente – Grupo 3</title>
-  <meta name="description" content="Lastrando: recorrido gastronómico por Buenos Aires. Actividad 2 – Grupo 3.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Lastrando - Grupo 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --negro: #1A1A1A;
-      --crema: #F6F4F1;
-      --piedra: #C9C1B4;
-      --nude: #F6DFCD;
-      --blanco: #FFFFFF;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--crema);
-      color: var(--negro);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #F6F4F1;
+      color: #1A1A1A;
+      text-align: center;
     }
+
     header {
-      padding: 1rem;
-      border-bottom: 1px solid var(--piedra);
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      text-align: center;
+      padding: 15px;
+      border-bottom: 1px solid #C9C1B4;
     }
+
     main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2.5rem 1rem;
-      text-align: center;
+      padding: 40px 20px;
     }
-    .logo { width: 70%; max-width: 320px; height: auto; }
+
+    .logo {
+      width: 250px;
+      max-width: 80%;
+    }
+
     .proximamente {
-      background: var(--nude);
-      padding: 1.25rem 1.5rem;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 480px;
+      background-color: #F6DFCD;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 450px;
+      border-radius: 10px;
     }
-    .proximamente p {
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-    .proximamente h1 { font-size: 1.75rem; font-weight: 700; }
-    .proximamente span { display: block; font-size: .95rem; font-weight: 400; margin-top: .25rem; }
+
     .integrantes {
-      background: var(--blanco);
-      border: 1px solid var(--piedra);
-      border-radius: 12px;
-      padding: 1.5rem;
-      width: 100%;
-      max-width: 480px;
+      background-color: #FFFFFF;
+      border: 1px solid #C9C1B4;
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 450px;
+      border-radius: 10px;
     }
-    .integrantes h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      margin-bottom: 1rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
     }
-    .integrantes ul { list-style: none; display: grid; gap: .5rem; }
-    .integrantes li { padding: .5rem; border-radius: 8px; background: var(--crema); }
+
+    li {
+      padding: 8px;
+    }
+
     footer {
-      padding: 1rem;
-      font-size: .75rem;
-      text-align: center;
-      border-top: 1px solid var(--piedra);
+      padding: 15px;
+      font-size: 14px;
+      border-top: 1px solid #C9C1B4;
     }
+
     @media (min-width: 768px) {
-      header { font-size: .9rem; }
-      .proximamente h1 { font-size: 2.25rem; }
-      .integrantes ul { grid-template-columns: 1fr 1fr; }
-      .integrantes li:last-child { grid-column: 1 / -1; }
+      .logo {
+        width: 320px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    Diseño Web · Actividad 2 · <strong>Grupo N.º 3</strong>
+    <p>Actividad 2 - Grupo N° 3</p>
   </header>
 
   <main>
-    <img class="logo" src="logo.png" alt="Logo de Lastrando: el nombre escrito en letra manuscrita negra">
+    <img class="logo" src="logo.png" alt="Logo de Lastrando">
 
-    <section class="proximamente" aria-labelledby="titulo-proximamente">
+    <div class="proximamente">
       <p>Próximamente</p>
-      <h1 id="titulo-proximamente">Lastrando
-        <span>Recorrido gastronómico por Buenos Aires</span>
-      </h1>
-    </section>
+      <h1>Lastrando</h1>
+    </div>
 
-    <section class="integrantes" aria-labelledby="titulo-integrantes">
-      <h2 id="titulo-integrantes">Integrantes</h2>
+    <div class="integrantes">
+      <h2>Integrantes</h2>
       <ul>
         <li>Sol Blanco</li>
         <li>Isabella Cuccaro</li>
@@ -115,9 +90,12 @@
         <li>Leonela Juarez</li>
         <li>Camila Repond</li>
       </ul>
-    </section>
+    </div>
   </main>
 
-  <footer>© 2026 Lastrando · Grupo 3</footer>
+  <footer>
+    <p>Lastrando - Grupo 3</p>
+  </footer>
+
 </body>
 </html>
