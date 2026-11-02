@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         meriendas: {
             title: "Recorrido Cafeterías & Meriendas de Especialidad",
             places: [
-                "<strong>La Panera Rosa:</strong> Av. Coronel Díaz 2401, Recoleta (CABA)",
-                "<strong>Ayulem:</strong> La Pampa 2300, Belgrano (CABA)"
+                "<strong>La Panera Rosa:</strong> Jorge Luis Borges 1689 (Palermo)",
+                "<strong>Ayulem:</strong> Av. Emilio Castro 7478 (Mataderos)"
+                "<strong>Bambi:</strong> Mercedes 3920 (Devoto)"
+                "<strong>Vedra Café:</strong> Vidal 2360 (Belgrano)"
             ]
         },
         parrillas: {
