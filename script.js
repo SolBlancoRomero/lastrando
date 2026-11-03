@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Recorrido Parrillas & Bodegones Tradicionales",
             places: [
                 "<strong>Bodegón de All Boys:</strong> Mercedes 1951, Floresta (CABA)",
-                "<strong>El Ferroviario:</strong> Reservistas Argentinos 219, Liniers (CABA)"
+                "<strong>El Ferroviario:</strong> Reservistas Argentinos 219, Liniers (CABA)",
+                "<strong>La Miralla:</strong> Av. Eva Perón 7201 (CABA)"
             ]
         },
         bares: {
