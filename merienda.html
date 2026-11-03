@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeterías & Meriendas - LASTRANDO</title>
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: { carbon: '#1A1A1A', crema: '#F6F4F1', topo: '#C9C1B4', nude: '#F6DFCD' }
+            colors: {
+              carbon: '#1A1A1A',
+              crema: '#F6F4F1',
+              topo: '#C9C1B4',
+              nude: '#F6DFCD',
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+            }
           }
         }
       }
     </script>
 </head>
-<body class="bg-crema text-carbon font-sans min-h-screen flex flex-col">
+<body class="bg-crema text-carbon font-sans flex flex-col min-h-screen">
 
     <header class="bg-white border-b border-topo sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -25,55 +35,154 @@
                 <img src="logo.png" alt="Logo de Lastrando" class="h-8 w-auto object-contain">
             </a>
             <nav class="hidden md:flex space-x-6 font-medium text-sm">
-                <a href="index.html" class="text-nude font-bold border-b-2 border-nude">Inicio</a>
-                <a href="merienda.html" class="hover:text-topo transition">Meriendas</a>
+                <a href="index.html" class="hover:text-topo transition">Inicio</a>
+                <a href="merienda.html" class="text-nude font-bold border-b-2 border-nude">Meriendas</a>
                 <a href="parrillas.html" class="hover:text-topo transition">Parrillas & Bodegones</a>
                 <a href="fastfood.html" class="hover:text-topo transition">Fast Food</a>
                 <a href="bares.html" class="hover:text-topo transition">Bares & Night</a>
                 <a href="internacional.html" class="hover:text-topo transition">Internacional</a>
                 <a href="reservar.html" class="hover:text-topo transition">Reservar</a>
             </nav>
+            <button id="hamburger-btn" class="md:hidden p-2 text-carbon focus:outline-none" aria-label="Abrir menú de navegación">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-topo px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="index.html" class="block py-1 hover:text-topo">Inicio</a>
+            <a href="merienda.html" class="block py-1 text-nude font-bold">Meriendas</a>
+            <a href="parrillas.html" class="block py-1 hover:text-topo">Parrillas & Bodegones</a>
+            <a href="fastfood.html" class="block py-1 hover:text-topo">Fast Food</a>
+            <a href="bares.html" class="block py-1 hover:text-topo">Bares & Night</a>
+            <a href="internacional.html" class="block py-1 hover:text-topo">Internacional</a>
+            <a href="reservar.html" class="block py-1 hover:text-topo">Reservar</a>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12 flex-grow">
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 space-y-12">
+        <!-- Presentación de la sección -->
         <section class="space-y-4">
-            <h1 class="text-3xl md:text-4xl font-bold">Cafeterías de Especialidad & Ritual del Café</h1>
+            <h1 class="text-3xl md:text-4xl font-bold">Cafeterías de Especialidad & Ritual de Meriendas</h1>
             <p class="text-gray-700 leading-relaxed">
-                Este circuito reúne espacios estéticos y cálidos diseñados para los amantes de la buena lectura y la pausa contemplativa, combinando pastelería artesanal y variedades de granos seleccionados.
+                Una selección exclusiva de espacios estéticos y acogedores diseñados para los amantes de la buena lectura, el café de especialidad y la pausa contemplativa. Lugares que combinan repostería de autor, blends seleccionados y una ambientación única en la ciudad.
             </p>
             <div class="flex flex-wrap items-center gap-3">
                 <a href="reservar.html" class="bg-carbon text-crema hover:bg-opacity-90 px-4 py-1.5 rounded-full text-xs font-semibold transition">
-                    ☕ Reservar este Recorrido →
+                    Reservar este Recorrido
                 </a>
             </div>
         </section>
 
+        <!-- Grid de los 4 Lugares -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article class="bg-white p-6 rounded-lg border border-topo space-y-4">
-                <img src="assets/img/panera-rosa.jpg" alt="Interior acogedor de La Panera Rosa con vajilla de diseño y porción de torta casera" class="w-full h-56 object-cover rounded">
-                <h2 class="text-2xl font-bold">La Panera Rosa</h2>
-                <p class="text-sm text-gray-600">Pastelería artesanal en vajilla vintage y blends de café en esquinas emblemáticas de la ciudad.</p>
-                <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700">
-                    <p>📍 <strong>Ubicación:</strong> Sucursales en CABA (Polos comerciales)</p>
-                    <p>⏰ <strong>Horarios:</strong> Mar a Dom 08:30 a 20:00 hs</p>
-                    <p>⏳ <strong>Duración estimada:</strong> 1 a 2 horas</p>
+            
+            <!-- 1. La Panera Rosa -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/panerarosa.HEIC" alt="Interior acogedor de La Panera Rosa con vajilla de diseño y porción de torta artesanal" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">La Panera Rosa</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Un espacio dulce y romántico donde la vajilla vintage y los tonos pastel marcan una identidad inconfundible. Su propuesta gastronómica abarca desde waffles recién horneados y crepes franceses hasta porciones abundantes de tortas artesanales elaboradas diariamente, ideales para maridar con milkshakes o cafés clásicos.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Es la opción perfecta si buscás una merienda vistosa, porciones generosas para compartir y un espacio super fotogénico con estética pastel y amigable ambiente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Jorge Luis Borges 1689, CABA, Argentina</p>
+                        <p><strong>Horario:</strong> Todos los días de 08:30 a 00:00 hs.</p>
+                        <p><strong>Medios de pago:</strong> Tarjetas de débito/crédito, efectivo y Mercado Pago</p>
+                    </div>
                 </div>
             </article>
 
-            <article class="bg-white p-6 rounded-lg border border-topo space-y-4">
-                <img src="assets/img/ayulem.jpg" alt="Rincón de lectura iluminado en Ayulem con taza de flat white y libro abierto" class="w-full h-56 object-cover rounded">
-                <h2 class="text-2xl font-bold">Ayulem & Cafés de Barrio</h2>
-                <p class="text-sm text-gray-600">Ambiente tranquilo ideal para lectura y desconexión digital con tostadas de masa madre.</p>
-                <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700">
-                    <p>📍 <strong>Ubicación:</strong> Zonas residenciales de fácil acceso</p>
-                    <p>⏰ <strong>Horarios:</strong> Mar a Dom 09:00 a 20:00 hs</p>
-                    <p>⏳ <strong>Duración estimada:</strong> 1.5 horas</p>
+            <!-- 2. Ayulem & Cafés de Barrio -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/ayulem.HEIC" alt="Mesa de café de especialidad con tostadas de masa madre en Ayulem" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Ayulem & Cafés de Barrio</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Con una impronta cálida y barrial, Ayulem se presenta como un refugio de tranquilidad. Su foco está en el café de especialidad de origen seleccionado y la panadería artesanal. Tostadas de masa madre, palta crocante y opciones pastelera sin conservantes hacen de este rincón el favorito de los vecinos.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Ideal si buscás desconexión digital, una buena sesión de lectura y una atención personalizada que te hace sentir como en casa con auténtica cocina casera.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Av. Emilio Castro 7478, CABA, Argentina</p>
+                        <p><strong>Horario:</strong> Lunes a domingo y feriados de 7:00 a 21:30 hs</p>
+                        <p><strong>Medios de pago:</strong> Efectivo y Transferencias bancarias</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Vedra Café -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/meriendavedra.heif" alt="Torta de frutos rojos, pastelería y bebidas en Vedra Café" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Vedra Café</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Vedra fusiona el diseño moderno y minimalist con un barismo de altísima precisión. Destacado por sus métodos de filtrado y recetas exclusivas de pastelería nórdica, es un espacio minimalista iluminado por luz natural donde cada taza de espresso refleja notas equilibradas de granos finamente tostados.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Es la parada obligada para los puristas del café de especialidad que valoran los filtrados de origen, los cinnamon rolls recién horneados y un ambiente sobrio pero moderno.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Vidal 2360, CABA, Argentina</p>
+                        <p><strong>Horario:</strong> Todos los días de 8:00 a 20:00 hs</p>
+                        <p><strong>Medios de pago:</strong> Mercado Pago, tarjetas y efectivo</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Bambi -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/bambi.HEIC" alt="Café helado y cookie de frambuesa en Bambi" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Bambi</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Un espacio moderno y acogedor que celebra la repostería artesanal contemporánea. Bambi resalta por sus alfajores sablée de dulce de leche casero, sus budines de limón y amapola y sus infusiones frías de estación. Una atmósfera pet-friendly para disfrutar al aire libre en sus mesitas sobre la vereda.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Excelente opción para ir acompañado de tu mascota, probar pastelería artesanal fina y disfrutar de sus mesitas al aire libre durante las tardes de sol.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Mercedes 3920, CABA, Argentina</p>
+                        <p><strong>Horario:</strong> Martes a jueves y domingos de 10:00 a 00:00 y los viernes y sábados de 10:00 a 00:30</p>
+                        <p><strong>Medios de pago:</strong> Tarjetas, billeteras virtuales y efectivo</p>
+                    </div>
                 </div>
             </article>
         </section>
 
-    <!-- Formulario de Consultas -->
+        <!-- Sección de Recomendaciones -->
+        <section class="bg-white p-6 rounded-lg border border-topo space-y-3">
+            <h2 class="text-xl font-bold">Recomendaciones para tu merienda</h2>
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 leading-relaxed">
+                <li><strong>¿Opciones Veganas / Sin TACC?</strong> La mayoría de los locales cuentan con leches vegetales (almendras, avena) y opciones pasteleras aptas para celíacos o veganos. Te aconsejamos consultar la carta al ingresar.</li>
+                <li><strong>Reservas y anticipación:</strong> Para circuitos con alta concurrencia por la tarde (especialmente fines de semana entre las 16:00 y las 18:30 hs), asegurar tu lugar mediante reservas previas evita largas filas de espera.</li>
+                <li><strong>Medios de pago y promociones:</strong> Muchos cafés ofrecen descuentos especiales de lunes a viernes o beneficios con billeteras virtuales de forma diaria.</li>
+            </ul>
+        </section>
+
+        <!-- Formulario de Consultas -->
         <section class="bg-white p-6 md:p-8 rounded-lg border border-topo max-w-2xl mx-auto space-y-6">
             <h2 class="text-2xl font-bold text-center">Consultas</h2>
             <form id="contact-form" class="space-y-4" novalidate>
@@ -111,7 +220,7 @@
         <!-- Asistente Virtual / Chatbot Interactivo -->
         <section class="bg-white p-6 rounded-lg border border-topo max-w-2xl mx-auto space-y-4">
             <h2 class="text-xl font-bold flex items-center space-x-2">
-                <span>🤖 Asistente Virtual LASTRANDO</span>
+                <span>Asistente Virtual LASTRANDO</span>
             </h2>
             <div id="chat-window" class="h-48 border border-topo rounded p-3 overflow-y-auto space-y-2 bg-crema text-xs">
                 <div class="bg-white p-2 rounded max-w-xs border border-topo">
@@ -126,7 +235,10 @@
     </main>
 
     <footer class="bg-carbon text-crema py-6 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-topo">LASTRANDO © 2026 • Proyecto UADE</div>
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-bold text-base">LASTRANDO © 2026</p>
+            <p class="text-xs text-topo">Materia: Diseño y Desarrollo Web • UADE | Punto de Interés 3: Isabella Cuccaro</p>
+        </div>
     </footer>
 </body>
 </html>
