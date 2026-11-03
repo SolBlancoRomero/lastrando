@@ -11,18 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
                 "<strong>Félix Burgers:</strong> Av. Francisco Beiró 4473, Devoto (CABA)",
-                "<strong>Big Pons:</strong> Fitz Roy 1731 (Palermo)",
+                "<strong>Big Pons:</strong> Unicenter Shopping, Martínez (GBA Norte)",
                 "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
-                "<strong>Frank's Grill:</strong> Cabello 3401 (Palermo)"
+                "<strong>Frank's Grill:</strong> Av. del Libertador 13837, Martínez (GBA Norte)"
             ]
         },
         meriendas: {
             title: "Recorrido Cafeterías & Meriendas de Especialidad",
             places: [
-                "<strong>La Panera Rosa:</strong> Jorge Luis Borges 1689 (Palermo)",
-                "<strong>Ayulem:</strong> Av. Emilio Castro 7478 (Mataderos)"
-                "<strong>Bambi:</strong> Mercedes 3920 (Devoto)"
-                "<strong>Vedra Café:</strong> Vidal 2360 (Belgrano)"
+                "<strong>La Panera Rosa:</strong> Av. Coronel Díaz 2401, Recoleta (CABA)",
+                "<strong>Ayulem:</strong> La Pampa 2300, Belgrano (CABA)"
             ]
         },
         parrillas: {
