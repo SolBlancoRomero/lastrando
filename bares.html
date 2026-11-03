@@ -1,60 +1,365 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bares & Night - LASTRANDO</title>
-    <script src="script.js"></script>
+    <title>Bares & Night - LASTRANDO</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              carbon: '#1A1A1A',
-              crema: '#F6F4F1',
-              topo: '#C9C1B4',
-              nude: '#F6DFCD',
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        carbon: '#1A1A1A',
+                        crema: '#F6F4F1',
+                        topo: '#C9C1B4',
+                        nude: '#F6DFCD'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
             }
-          }
         }
-      }
     </script>
+    <script src="script.js" defer></script>
 </head>
+
 <body class="bg-crema text-carbon font-sans flex flex-col min-h-screen">
+
+    <!-- ENCABEZADO -->
     <header class="bg-white border-b border-topo sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="logo.png" alt="Logo de Lastrando" class="h-8 w-auto object-contain">
-        </a>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="logo.png" alt="Logo de Lastrando" class="h-8 w-auto object-contain">
+            </a>
+
             <nav class="hidden md:flex space-x-6 font-medium text-sm">
-                <a href="index.html" class="text-nude font-bold border-b-2 border-nude">Inicio</a>
+                <a href="index.html" class="hover:text-topo transition">Inicio</a>
                 <a href="merienda.html" class="hover:text-topo transition">Meriendas</a>
                 <a href="parrillas.html" class="hover:text-topo transition">Parrillas & Bodegones</a>
                 <a href="fastfood.html" class="hover:text-topo transition">Fast Food</a>
-                <a href="bares.html" class="hover:text-topo transition">Bares & Night</a>
+                <a href="bares.html" class="text-nude font-bold border-b-2 border-nude">Bares & Night</a>
                 <a href="internacional.html" class="hover:text-topo transition">Internacional</a>
                 <a href="reservar.html" class="hover:text-topo transition">Reservar</a>
             </nav>
-            
-            <button id="hamburger-btn" class="md:hidden p-2 text-carbon focus:outline-none" aria-label="Abrir menú de navegación">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+
+            <button id="hamburger-btn" class="md:hidden p-2 text-carbon" aria-label="Abrir menú de navegación">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-topo px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
-            <a href="index.html" class="block py-1 hover:text-topo">Inicio</a>
-            <a href="meriendas.html" class="block py-1 hover:text-topo">Meriendas</a>
-            <a href="parrillas-bodegones.html" class="block py-1 hover:text-topo">Parrillas & Bodegones</a>
-            <a href="fast-food.html" class="block py-1 hover:text-topo">Fast Food</a>
-            <a href="bares-night.html" class="block py-1 hover:text-topo">Bares & Night</a>
-            <a href="internacional.html" class="block py-1 hover:text-topo">Internacional</a>
-            <a href="reservar.html" class="block py-1 text-nude font-bold">Reservar</a>
+            <a href="index.html" class="block py-1">Inicio</a>
+            <a href="merienda.html" class="block py-1">Meriendas</a>
+            <a href="parrillas.html" class="block py-1">Parrillas & Bodegones</a>
+            <a href="fastfood.html" class="block py-1">Fast Food</a>
+            <a href="bares.html" class="block py-1 text-nude font-bold">Bares & Night</a>
+            <a href="internacional.html" class="block py-1">Internacional</a>
+            <a href="reservar.html" class="block py-1">Reservar</a>
         </div>
     </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- INTRODUCCIÓN -->
+        <section class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-bold">
+                Bares & Night: recorré la noche porteña
+            </h1>
+
+            <p class="text-gray-700 leading-relaxed">
+                Descubrí algunos de los bares más interesantes de Buenos Aires,
+                donde la coctelería de autor, la gastronomía y la ambientación
+                se combinan para ofrecer experiencias únicas. Este recorrido
+                reúne cuatro propuestas ideales para disfrutar de una salida
+                nocturna, compartir con amigos y conocer diferentes estilos
+                de la vida nocturna porteña.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="reservar.html" class="bg-carbon text-crema hover:bg-opacity-90 px-4 py-1.5 rounded-full text-xs font-semibold transition">
+                    Reservar este Recorrido
+                </a>
+            </div>
+        </section>
+
+        <!-- TARJETAS DE LOS BARES -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- BAR 1: INVERNADERO -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/Invernadero.jpg" alt="Mesa con platos y cócteles en Invernadero Bar" class="w-full h-64 object-cover">
+
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Invernadero Bar</h2>
+
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Ubicado en el barrio de Recoleta, Invernadero
+                            propone una experiencia gastronómica que combina
+                            coctelería, una cuidada ambientación y opciones
+                            para compartir. Su propuesta invita a disfrutar
+                            de una salida relajada, donde los tragos y la
+                            comida tienen un papel protagonista.
+                        </p>
+
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>
+                                Ideal para quienes buscan una experiencia
+                                de coctelería acompañada por una propuesta
+                                gastronómica para compartir, en un ambiente
+                                especial dentro de Recoleta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Agüero 2502, Recoleta (CABA)</p>
+                        <p><strong>Horario:</strong> Lunes a domingo, de 9 am a 1 am.</p>
+                        <p><strong>Propuesta:</strong> Coctelería y gastronomía para compartir</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BAR 2: TRADITION & REBELLION -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/Tradition & Rebellion .jpg" alt="Platos y cócteles en Tradition & Rebellion" class="w-full h-64 object-cover">
+
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Tradition & Rebellion</h2>
+
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Situado en Puerto Madero, Tradition & Rebellion
+                            ofrece una propuesta que combina gastronomía
+                            contemporánea y coctelería. Su concepto invita
+                            a disfrutar de distintos platos, cócteles y
+                            una experiencia pensada para quienes buscan
+                            salir de la rutina y conocer nuevos sabores.
+                        </p>
+
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>
+                                Es una alternativa interesante para quienes
+                                disfrutan de la gastronomía y buscan combinar
+                                una buena comida con cócteles en Puerto Madero.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Olga Cossettini 731, Puerto Madero (CABA)</p>
+                        <p><strong>Horario:</strong> Martes a Sábados de 6pm a 3am.</p>
+                        <p><strong>Propuesta:</strong> Gastronomía contemporánea y coctelería</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BAR 3: INTERVALO -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/Intervalo .jpg" alt="Cócteles y platos en Intervalo Recoleta" class="w-full h-64 object-cover">
+
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Intervalo</h2>
+
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            En Recoleta, Intervalo presenta una propuesta
+                            donde se encuentran la gastronomía y la
+                            coctelería. Su ambiente resulta ideal para
+                            disfrutar de una cena, compartir distintos
+                            platos y acompañarlos con cócteles.
+                        </p>
+
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>
+                                Una buena opción para quienes buscan
+                                combinar una salida gastronómica con
+                                una experiencia de tragos, en una
+                                ubicación privilegiada de Recoleta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Vicente López 2180, Recoleta (CABA)</p>
+                        <p><strong>Horario:</strong> Martes a sábados de 7pm a 3:30am</p>
+                        <p><strong>Propuesta:</strong> Gastronomía y cócteles</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BAR 4: ANDANTE -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/IMG_3682.jpg" alt="Barra e interior de Andante Bar en Palermo" class="w-full h-64 object-cover">
+
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Andante Bar</h2>
+
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Ubicado en Palermo, Andante Bar se destaca
+                            por su ambientación y su propuesta de
+                            coctelería. La barra, la iluminación cálida
+                            y los detalles de su interior crean un
+                            espacio atractivo para disfrutar de una
+                            salida nocturna.
+                        </p>
+
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>
+                                Es una excelente alternativa para
+                                quienes disfrutan de los bares con
+                                personalidad, una barra protagonista
+                                y un ambiente ideal para compartir
+                                una noche en Palermo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Arévalo 1677, Palermo (CABA)</p>
+                        <p><strong>Horario:</strong> Martes a domingo, de 5pm a 1:30 am.</p>
+                        <p><strong>Propuesta:</strong> Coctelería y ambiente nocturno</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- RECOMENDACIONES -->
+        <section class="bg-white p-6 rounded-lg border border-topo space-y-3">
+            <h2 class="text-xl font-bold">Recomendaciones para tu visita</h2>
+
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-2 leading-relaxed">
+                <li>
+                    <strong>Reservas:</strong>
+                    Se recomienda reservar con anticipación,
+                    especialmente los fines de semana y feriados.
+                </li>
+
+                <li>
+                    <strong>Opciones gastronómicas:</strong>
+                    Si tenés alguna restricción alimentaria,
+                    consultá previamente las alternativas
+                    vegetarianas, veganas o sin TACC.
+                </li>
+
+                <li>
+                    <strong>Concurrencia:</strong>
+                    Los bares suelen recibir mayor cantidad
+                    de visitantes durante la noche.
+                    Planificá tu visita para disfrutar
+                    de la experiencia con comodidad.
+                </li>
+
+                <li>
+                    <strong>Medios de pago:</strong>
+                    Consultá los medios de pago aceptados
+                    y las promociones disponibles al
+                    momento de reservar.
+                </li>
+            </ul>
+        </section>
+
+        <!-- FORMULARIO DE CONSULTAS -->
+        <section class="bg-white p-6 md:p-8 rounded-lg border border-topo max-w-2xl mx-auto space-y-6">
+            <h2 class="text-2xl font-bold text-center">Consultas</h2>
+
+            <form id="contact-form" class="space-y-4" novalidate>
+
+                <div>
+                    <label for="contact-name" class="block text-sm font-medium">Nombre completo</label>
+                    <input type="text" id="contact-name" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required>
+                    <span id="name-error" class="text-xs text-red-500 hidden">Por favor ingresá tu nombre.</span>
+                </div>
+
+                <div>
+                    <label for="contact-email" class="block text-sm font-medium">Correo Electrónico</label>
+                    <input type="email" id="contact-email" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required>
+                    <span id="email-error" class="text-xs text-red-500 hidden">Ingresá un correo electrónico válido.</span>
+                </div>
+
+                <div>
+                    <label for="contact-reason" class="block text-sm font-medium">Motivo de la consulta</label>
+                    <select id="contact-reason" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon">
+                        <option value="recomendacion">Recomendar un local</option>
+                        <option value="recorrido">Dudas sobre los recorridos / reservas</option>
+                        <option value="menu">Dudas sobre opciones celíacas / veganas</option>
+                        <option value="otro">Consulta general</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="contact-message" class="block text-sm font-medium">Mensaje</label>
+                    <textarea id="contact-message" rows="4" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required></textarea>
+                    <span id="message-error" class="text-xs text-red-500 hidden">El mensaje no puede estar vacío.</span>
+                </div>
+
+                <button type="submit" class="w-full bg-carbon text-crema font-bold py-2.5 rounded hover:bg-opacity-90 transition">
+                    Enviar Consulta (Simulación)
+                </button>
+
+            </form>
+
+            <div id="contact-alert" class="hidden p-4 bg-green-100 border border-green-400 text-green-800 rounded text-sm text-center"></div>
+        </section>
+
+        <!-- ASISTENTE VIRTUAL -->
+        <section class="bg-white p-6 rounded-lg border border-topo max-w-2xl mx-auto space-y-4">
+            <h2 class="text-xl font-bold">
+                Asistente Virtual LASTRANDO
+            </h2>
+
+            <div id="chat-window" class="h-48 border border-topo rounded p-3 overflow-y-auto space-y-2 bg-crema text-xs">
+                <div class="bg-white p-2 rounded max-w-xs border border-topo">
+                    ¡Hola! Soy el asistente gastronómico de Lastrando.
+                    ¿Tenés dudas sobre las reservas, los horarios de los
+                    recorridos o los medios de pago?
+                </div>
+            </div>
+
+            <div class="flex space-x-2">
+                <input type="text" id="chat-input" placeholder="Escribí tu pregunta acá..." class="flex-grow min-w-0 border border-topo rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-carbon">
+                <button id="chat-send" class="bg-nude px-4 py-1.5 font-bold rounded text-sm hover:bg-opacity-80 transition">
+                    Enviar
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-carbon text-crema py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-bold text-base">LASTRANDO © 2026</p>
+            <p class="text-xs text-topo">
+                Materia: Diseño y Desarrollo Web • UADE
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
