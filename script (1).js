@@ -1,5 +1,4 @@
 // Gestión de reserva de recorridos completos y turnos dinámicos
-// Gestión de reserva de recorridos completos y turnos dinámicos
 document.addEventListener('DOMContentLoaded', () => {
     const circuitSelect = document.getElementById('circuit-select');
     const circuitInfoBox = document.getElementById('circuit-info-box');
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('table-booking-form');
     const bookingConfirmation = document.getElementById('booking-confirmation');
 
-    const circuitDetails = {
+  const circuitDetails = {
         fastfood: {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
@@ -20,10 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         meriendas: {
             title: "Recorrido Cafeterías & Meriendas de Especialidad",
             places: [
-                "<strong>La Panera Rosa:</strong> Vidal 2360, Belgrano (CABA)",
-                "<strong>Ayulem & Cafés de Barrio:</strong> Av. Emilio Castro 7478, Mataderos (CABA)",
-                "<strong>Vedra Café:</strong> Jorge Luis Borges 1689, Palermo (CABA)",
-                "<strong>Bambi:</strong> Mercedes 3920, Devoto (CABA)"
+                "<strong>La Panera Rosa:</strong> Av. Coronel Díaz 2401, Recoleta (CABA)",
+                "<strong>Ayulem:</strong> La Pampa 2300, Belgrano (CABA)"
             ]
         },
         parrillas: {
@@ -55,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedKey = circuitSelect.value;
         const details = circuitDetails[selectedKey];
 
-        // 1. Actualiza el cuadro informativo de los locales en forma de lista
+        // 1. Actualiza el cuadro informativo de los locales
         if (details && circuitInfoBox) {
             let listHTML = details.places.map(place => `<li>• ${place}</li>`).join('');
             circuitInfoBox.innerHTML = `
@@ -70,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shiftSelect.innerHTML = ''; // Limpia opciones anteriores
 
             if (selectedKey === 'meriendas') {
+                // Opciones específicas para Meriendas
                 const option1 = document.createElement('option');
                 option1.value = "Tarde (15:30 a 17:00 hs)";
                 option1.textContent = "Tarde (15:30 a 17:00 hs)";
@@ -81,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 shiftSelect.appendChild(option1);
                 shiftSelect.appendChild(option2);
             } else {
+                // Opciones estándar para el resto de los recorridos
                 const option1 = document.createElement('option');
                 option1.value = "Mediodía (12:30 a 15:30 hs)";
                 option1.textContent = "Mediodía (12:30 a 15:30 hs)";
@@ -97,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (circuitSelect) {
         circuitSelect.addEventListener('change', updateCircuitData);
-        updateCircuitData(); // Inicializa al cargar la página para que se vea por defecto
+        updateCircuitData(); // Inicializa al cargar la página
     }
 
     if (bookingForm) {
