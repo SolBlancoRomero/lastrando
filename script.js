@@ -1,4 +1,15 @@
-// Gestión de reserva de recorridos completos y turnos dinámicos
+// MENÚ HAMBURGUESA 
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+});
+// RESERVAS
 document.addEventListener('DOMContentLoaded', () => {
     const circuitSelect = document.getElementById('circuit-select');
     const circuitInfoBox = document.getElementById('circuit-info-box');
@@ -6,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('table-booking-form');
     const bookingConfirmation = document.getElementById('booking-confirmation');
 
-  const circuitDetails = {
+    // Listado de paradas por circuito 
+    const circuitDetails = {
         fastfood: {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
@@ -62,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 2. Actualiza los turnos disponibles según el recorrido
+        // turnos d
         if (shiftSelect) {
-            shiftSelect.innerHTML = ''; // Limpia opciones anteriores
-
+            shiftSelect.innerHTML = '';
             if (selectedKey === 'meriendas') {
-                // Opciones específicas para Meriendas
+                
+                // Meriendas (Tardes)
                 const option1 = document.createElement('option');
                 option1.value = "Tarde (15:30 a 17:00 hs)";
                 option1.textContent = "Tarde (15:30 a 17:00 hs)";
@@ -79,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 shiftSelect.appendChild(option1);
                 shiftSelect.appendChild(option2);
             } else {
-                // Opciones estándar para el resto de los recorridos
+                // (Mediodía / Noche)
                 const option1 = document.createElement('option');
                 option1.value = "Mediodía (12:30 a 15:30 hs)";
                 option1.textContent = "Mediodía (12:30 a 15:30 hs)";
