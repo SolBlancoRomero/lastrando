@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// MENÚ HAMBURGUESA
+=======
 // MENÚ HAMBURGUESA 
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -9,7 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+<<<<<<< HEAD
+
+// RESERVAS 
+=======
 // RESERVAS
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
 document.addEventListener('DOMContentLoaded', () => {
     const circuitSelect = document.getElementById('circuit-select');
     const circuitInfoBox = document.getElementById('circuit-info-box');
@@ -17,15 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('table-booking-form');
     const bookingConfirmation = document.getElementById('booking-confirmation');
 
+<<<<<<< HEAD
+    // direcciones 
+=======
     // Listado de paradas por circuito 
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
     const circuitDetails = {
         fastfood: {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
                 "<strong>Félix Burgers:</strong> Av. Francisco Beiró 4473, Devoto (CABA)",
+<<<<<<< HEAD
+                "<strong>Big Pons:</strong> Fitz Roy 1731 (Palermo)",
+                "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
+                "<strong>Frank's Grill:</strong> Cabello 3401 (Palermo)"
+=======
                 "<strong>Big Pons:</strong> Unicenter Shopping, Martínez (GBA Norte)",
                 "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
                 "<strong>Frank's Grill:</strong> Av. del Libertador 13837, Martínez (GBA Norte)"
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
             ]
         },
         meriendas: {
@@ -45,8 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
         bares: {
             title: "Recorrido Bares, Coctelería & Night",
             places: [
+<<<<<<< HEAD
+                "<strong>Invernadero Bar:</strong> Agüero 2502, Recoleta (CABA)",
+                "<strong>Tradition & Rebellion:</strong> Olga Cossettini 731, Puerto Madero (CABA)",
+                "<strong>Intervalo:</strong> Vicente López 2180, Recoleta (CABA)",
+                "<strong>Andante Bar:</strong> Arévalo 1677, Palermo (CABA)"
+=======
                 "<strong>Invernadero:</strong> Av. del Libertador 1609, Recoleta (CABA)",
                 "<strong>Misión Bar:</strong> Plaza Serrano, Palermo (CABA)"
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
             ]
         },
         internacional: {
@@ -64,7 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedKey = circuitSelect.value;
         const details = circuitDetails[selectedKey];
 
+<<<<<<< HEAD
+        // 1. Actualiza el cuadro informativo de los locales en la reserva
+=======
         // 1. Actualiza el cuadro informativo de los locales
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
         if (details && circuitInfoBox) {
             let listHTML = details.places.map(place => `<li>• ${place}</li>`).join('');
             circuitInfoBox.innerHTML = `
@@ -74,11 +104,19 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
+<<<<<<< HEAD
+        // Actualiza los turnos 
+        if (shiftSelect) {
+            shiftSelect.innerHTML = ''; 
+
+            if (selectedKey === 'meriendas') {
+=======
         // turnos d
         if (shiftSelect) {
             shiftSelect.innerHTML = '';
             if (selectedKey === 'meriendas') {
                 
+>>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
                 // Meriendas (Tardes)
                 const option1 = document.createElement('option');
                 option1.value = "Tarde (15:30 a 17:00 hs)";
@@ -133,4 +171,127 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
+<<<<<<< HEAD
+
+// VALIDACIÓN DE FORMULARIO 
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
+
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+    const contactAlert = document.getElementById('contact-alert');
+
+    function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        if (nameInput && nameInput.value.trim() === '') {
+            if (nameError) nameError.classList.remove('hidden');
+            isValid = false;
+        } else if (nameError) {
+            nameError.classList.add('hidden');
+        }
+
+        if (emailInput && !validateEmail(emailInput.value.trim())) {
+            if (emailError) emailError.classList.remove('hidden');
+            isValid = false;
+        } else if (emailError) {
+            emailError.classList.add('hidden');
+        }
+
+        if (messageInput && messageInput.value.trim() === '') {
+            if (messageError) messageError.classList.remove('hidden');
+            isValid = false;
+        } else if (messageError) {
+            messageError.classList.add('hidden');
+        }
+
+        if (isValid && contactAlert) {
+            const nombre = nameInput ? nameInput.value.trim() : 'Usuario';
+            contactAlert.innerHTML = `<strong>¡Mensaje enviado con éxito!</strong><br>Gracias <em>${nombre}</em>, nos pondremos en contacto a la brevedad.`;
+            contactAlert.classList.remove('hidden');
+            contactForm.reset();
+        }
+    });
+});
+
+// CHATBOT
+document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatWindow = document.getElementById('chat-window');
+
+    if (!chatInput || !chatSend || !chatWindow) return;
+
+    const faqDatabase = [
+        { 
+            keywords: ['horario', 'hora', 'abren', 'abierto', 'cierran'], 
+            response: 'Los horarios varían según la experiencia: las cafeterías abren de 08:30 a 20:00 hs, mientras que hamburgueserías y bares atienden desde el mediodía hasta la madrugada.' 
+        },
+        { 
+            keywords: ['reserva', 'reservar', 'turno', 'lugar', 'costo', 'precio'], 
+            response: 'Podés realizar la simulación de reserva desde nuestro menú en la sección "Reservar" seleccionando circuito, turno y cantidad de personas.' 
+        },
+        { 
+            keywords: ['pago', 'tarjeta', 'efectivo', 'mercadopago', 'cuotas'], 
+            response: 'La mayoría de los locales adheridos aceptan efectivo, tarjetas de débito/crédito y billeteras digitales (Mercado Pago).' 
+        },
+        { 
+            keywords: ['vegano', 'vegetariano', 'tacc', 'celiaco', 'sin tacc', 'gluten'], 
+            response: 'Todos nuestros circuitos cuentan con locales que incluyen opciones vegetarianas y alternativas adaptadas. Te sugerimos consultar la carta específica de cada lugar.' 
+        },
+        { 
+            keywords: ['ubicacion', 'donde', 'dirección', 'mapa', 'llegar'], 
+            response: 'En nuestra página principal (Inicio) podés consultar el mapa interactivo general con todos los puntos gastronómicos marcados.' 
+        }
+    ];
+
+    function appendMessage(sender, text) {
+        const msgDiv = document.createElement('div');
+        if (sender === 'user') {
+            msgDiv.className = 'bg-nude text-carbon p-2 rounded max-w-xs ml-auto text-right border border-topo font-medium';
+        } else {
+            msgDiv.className = 'bg-white text-carbon p-2 rounded max-w-xs border border-topo';
+        }
+        msgDiv.textContent = text;
+        chatWindow.appendChild(msgDiv);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    function processQuestion() {
+        const query = chatInput.value.trim().toLowerCase();
+        if (query === '') return;
+
+        appendMessage('user', chatInput.value);
+        chatInput.value = '';
+
+        let foundResponse = 'Lo siento, no entendí tu pregunta. Probá consultando por horarios, reservas, medios de pago, ubicación o menús especiales.';
+
+        for (const item of faqDatabase) {
+            if (item.keywords.some(kw => query.includes(kw))) {
+                foundResponse = item.response;
+                break;
+            }
+        }
+
+        setTimeout(() => {
+            appendMessage('bot', foundResponse);
+        }, 400);
+    }
+
+    chatSend.addEventListener('click', processQuestion);
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') processQuestion();
+    });
 });
