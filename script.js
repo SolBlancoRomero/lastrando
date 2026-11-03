@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// MENÚ HAMBURGUESA
-=======
 // MENÚ HAMBURGUESA 
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -13,12 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-<<<<<<< HEAD
 
-// RESERVAS 
-=======
 // RESERVAS
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
 document.addEventListener('DOMContentLoaded', () => {
     const circuitSelect = document.getElementById('circuit-select');
     const circuitInfoBox = document.getElementById('circuit-info-box');
@@ -26,25 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookingForm = document.getElementById('table-booking-form');
     const bookingConfirmation = document.getElementById('booking-confirmation');
 
-<<<<<<< HEAD
     // direcciones 
-=======
-    // Listado de paradas por circuito 
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
     const circuitDetails = {
         fastfood: {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
                 "<strong>Félix Burgers:</strong> Av. Francisco Beiró 4473, Devoto (CABA)",
-<<<<<<< HEAD
-                "<strong>Big Pons:</strong> Fitz Roy 1731 (Palermo)",
-                "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
-                "<strong>Frank's Grill:</strong> Cabello 3401 (Palermo)"
-=======
                 "<strong>Big Pons:</strong> Unicenter Shopping, Martínez (GBA Norte)",
                 "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
                 "<strong>Frank's Grill:</strong> Av. del Libertador 13837, Martínez (GBA Norte)"
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
             ]
         },
         meriendas: {
@@ -64,15 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         bares: {
             title: "Recorrido Bares, Coctelería & Night",
             places: [
-<<<<<<< HEAD
                 "<strong>Invernadero Bar:</strong> Agüero 2502, Recoleta (CABA)",
                 "<strong>Tradition & Rebellion:</strong> Olga Cossettini 731, Puerto Madero (CABA)",
                 "<strong>Intervalo:</strong> Vicente López 2180, Recoleta (CABA)",
                 "<strong>Andante Bar:</strong> Arévalo 1677, Palermo (CABA)"
-=======
-                "<strong>Invernadero:</strong> Av. del Libertador 1609, Recoleta (CABA)",
-                "<strong>Misión Bar:</strong> Plaza Serrano, Palermo (CABA)"
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
             ]
         },
         internacional: {
@@ -89,12 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const selectedKey = circuitSelect.value;
         const details = circuitDetails[selectedKey];
-
-<<<<<<< HEAD
-        // 1. Actualiza el cuadro informativo de los locales en la reserva
-=======
+        
         // 1. Actualiza el cuadro informativo de los locales
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
         if (details && circuitInfoBox) {
             let listHTML = details.places.map(place => `<li>• ${place}</li>`).join('');
             circuitInfoBox.innerHTML = `
@@ -104,19 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-<<<<<<< HEAD
-        // Actualiza los turnos 
+        // 2. Actualiza los turnos 
         if (shiftSelect) {
             shiftSelect.innerHTML = ''; 
 
             if (selectedKey === 'meriendas') {
-=======
-        // turnos d
-        if (shiftSelect) {
-            shiftSelect.innerHTML = '';
-            if (selectedKey === 'meriendas') {
-                
->>>>>>> 67ce8b897abd794dbc6caa6fc9f2c1061a298c0a
                 // Meriendas (Tardes)
                 const option1 = document.createElement('option');
                 option1.value = "Tarde (15:30 a 17:00 hs)";
@@ -172,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-<<<<<<< HEAD
 
 // VALIDACIÓN DE FORMULARIO 
 document.addEventListener('DOMContentLoaded', () => {
