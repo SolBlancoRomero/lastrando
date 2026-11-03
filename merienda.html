@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeterías & Meriendas - LASTRANDO</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -71,19 +71,23 @@
                 </a>
             </div>
         </section>
-
-        <!-- Grid de los 4 Lugares -->
+        
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- 1. La Panera Rosa -->
+            <!-- La Panera Rosa -->
             <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
-                    <img src="img/panerarosa.HEIC" alt="Interior acogedor de La Panera Rosa con vajilla de diseño y porción de torta artesanal" class="w-full h-64 object-cover">
+                    <img src="img/panerarosa1.jpg" alt="Plato con tostadas francesas espolvoreadas con azúcar impalpable y jugo de naranja en La Panera Rosa" class="w-full h-64 object-cover">
                     <div class="p-6 space-y-4">
                         <h2 class="text-2xl font-bold">La Panera Rosa</h2>
                         <p class="text-sm text-gray-600 leading-relaxed">
                             Un espacio dulce y romántico donde la vajilla vintage y los tonos pastel marcan una identidad inconfundible. Su propuesta gastronómica abarca desde waffles recién horneados y crepes franceses hasta porciones abundantes de tortas artesanales elaboradas diariamente, ideales para maridar con milkshakes o cafés clásicos.
                         </p>
+                        <!-- Galería secundaria con las otras fotos de La Panera Rosa -->
+                        <div class="grid grid-cols-2 gap-2 pt-2">
+                            <img src="img/panerarosa2.jpg" alt="Café latte en vaso alto con crema y salsa de caramelo" class="w-full h-28 object-cover rounded border border-topo/50">
+                            <img src="img/panerarosa3.jpg" alt="Tostada con palta y huevo poché" class="w-full h-28 object-cover rounded border border-topo/50">
+                        </div>
                         <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
                             <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
                             <p>Es la opción perfecta si buscás una merienda vistosa, porciones generosas para compartir y un espacio super fotogénico con estética pastel y amigable ambiente.</p>
@@ -99,14 +103,14 @@
                 </div>
             </article>
 
-            <!-- 2. Ayulem & Cafés de Barrio -->
+            <!-- Ayulem & Cafés de Barrio -->
             <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
-                    <img src="img/ayulem.HEIC" alt="Mesa de café de especialidad con tostadas de masa madre en Ayulem" class="w-full h-64 object-cover">
+                    <img src="img/ayulem.jpg" alt="Mesa de café de especialidad con tostadas dulces y frutillas en Ayulem" class="w-full h-64 object-cover">
                     <div class="p-6 space-y-4">
                         <h2 class="text-2xl font-bold">Ayulem & Cafés de Barrio</h2>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Con una impronta cálida y barrial, Ayulem se presenta como un refugio de tranquilidad. Su foco está en el café de especialidad de origen seleccionado y la panadería artesanal. Tostadas de masa madre, palta crocante y opciones pastelera sin conservantes hacen de este rincón el favorito de los vecinos.
+                            Con una impronta cálida y barrial, Ayulem se presenta como un refugio de tranquilidad. Su foco está en el café de especialidad de origen seleccionado y la panadería artesanal. Tostadas de masa madre, palta crocante y opciones pasteleras sin conservantes hacen de este rincón el favorito de los vecinos.
                         </p>
                         <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
                             <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
@@ -123,14 +127,14 @@
                 </div>
             </article>
 
-            <!-- 3. Vedra Café -->
+            <!-- Vedra Café -->
             <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
                     <img src="img/meriendavedra.heif" alt="Torta de frutos rojos, pastelería y bebidas en Vedra Café" class="w-full h-64 object-cover">
                     <div class="p-6 space-y-4">
                         <h2 class="text-2xl font-bold">Vedra Café</h2>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Vedra fusiona el diseño moderno y minimalist con un barismo de altísima precisión. Destacado por sus métodos de filtrado y recetas exclusivas de pastelería nórdica, es un espacio minimalista iluminado por luz natural donde cada taza de espresso refleja notas equilibradas de granos finamente tostados.
+                            Vedra fusiona el diseño moderno y minimalista con un barismo de altísima precisión. Destacado por sus métodos de filtrado y recetas exclusivas de pastelería nórdica, es un espacio iluminado por luz natural donde cada taza de espresso refleja notas equilibradas de granos finamente tostados.
                         </p>
                         <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
                             <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
@@ -147,15 +151,19 @@
                 </div>
             </article>
 
-            <!-- 4. Bambi -->
+            <!-- Bambi -->
             <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
-                    <img src="img/bambi.HEIC" alt="Café helado y cookie de frambuesa en Bambi" class="w-full h-64 object-cover">
+                    <img src="img/Bambi.jpg" alt="Fachada y entrada exterior de Bambi con diseño moderno" class="w-full h-64 object-cover">
                     <div class="p-6 space-y-4">
                         <h2 class="text-2xl font-bold">Bambi</h2>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Un espacio moderno y acogedor que celebra la repostería artesanal contemporánea. Bambi resalta por sus alfajores sablée de dulce de leche casero, sus budines de limón y amapola y sus infusiones frías de estación. Una atmósfera pet-friendly para disfrutar al aire libre en sus mesitas sobre la vereda.
+                            Un espacio moderno y acogedor que celebra la repostería artesanal contemporánea. Bambi resalta por sus alfajores sablée de dulce de leche casero, sus cookies decoradas y sus infusiones frías de estación. Una atmósfera pet-friendly para disfrutar al aire libre en sus mesitas sobre la vereda.
                         </p>
+                        <!-- Foto secundaria de Bambi (platos y bebidas) -->
+                        <div class="pt-2">
+                            <img src="img/Bambi2.jpg" alt="Café helado, limonada y galletas en la mesa de Bambi" class="w-full h-36 object-cover rounded border border-topo/50">
+                        </div>
                         <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
                             <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
                             <p>Excelente opción para ir acompañado de tu mascota, probar pastelería artesanal fina y disfrutar de sus mesitas al aire libre durante las tardes de sol.</p>
