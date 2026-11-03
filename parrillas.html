@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parrillas & Bodegones - LASTRANDO</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -28,15 +28,16 @@
     </script>
 </head>
 <body class="bg-crema text-carbon font-sans flex flex-col min-h-screen">
+
     <header class="bg-white border-b border-topo sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="logo.png" alt="Logo de Lastrando" class="h-8 w-auto object-contain">
-        </a>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="logo.png" alt="Logo de Lastrando" class="h-8 w-auto object-contain">
+            </a>
             <nav class="hidden md:flex space-x-6 font-medium text-sm">
-                <a href="index.html" class="text-nude font-bold border-b-2 border-nude">Inicio</a>
+                <a href="index.html" class="hover:text-topo transition">Inicio</a>
                 <a href="merienda.html" class="hover:text-topo transition">Meriendas</a>
-                <a href="parrillas.html" class="hover:text-topo transition">Parrillas & Bodegones</a>
+                <a href="parrillas.html" class="text-nude font-bold border-b-2 border-nude">Parrillas & Bodegones</a>
                 <a href="fastfood.html" class="hover:text-topo transition">Fast Food</a>
                 <a href="bares.html" class="hover:text-topo transition">Bares & Night</a>
                 <a href="internacional.html" class="hover:text-topo transition">Internacional</a>
@@ -48,11 +49,210 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-topo px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
             <a href="index.html" class="block py-1 hover:text-topo">Inicio</a>
-            <a href="meriendas.html" class="block py-1 hover:text-topo">Meriendas</a>
-            <a href="parrillas-bodegones.html" class="block py-1 hover:text-topo">Parrillas & Bodegones</a>
-            <a href="fast-food.html" class="block py-1 hover:text-topo">Fast Food</a>
-            <a href="bares-night.html" class="block py-1 hover:text-topo">Bares & Night</a>
+            <a href="merienda.html" class="block py-1 hover:text-topo">Meriendas</a>
+            <a href="parrillas.html" class="block py-1 text-nude font-bold">Parrillas & Bodegones</a>
+            <a href="fastfood.html" class="block py-1 hover:text-topo">Fast Food</a>
+            <a href="bares.html" class="block py-1 hover:text-topo">Bares & Night</a>
             <a href="internacional.html" class="block py-1 hover:text-topo">Internacional</a>
-            <a href="reservar.html" class="block py-1 text-nude font-bold">Reservar</a>
+            <a href="reservar.html" class="block py-1 hover:text-topo">Reservar</a>
         </div>
     </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 space-y-12">
+        <section class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-bold">Parrillas & Bodegones de Barrio</h1>
+            <p class="text-gray-700 leading-relaxed">
+                Este recorrido es para los que disfrutan de la comida de siempre: milanesas enormes, parrilla a la leña, empanadas y postres caseros. Son lugares de barrio, con mucha historia, donde las porciones se comparten y el ambiente es como el de un almuerzo de domingo en familia.
+            </p>
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="reservar.html" class="bg-carbon text-crema hover:bg-opacity-90 px-4 py-1.5 rounded-full text-xs font-semibold transition">
+                    Reservar este Recorrido
+                </a>
+                <a href="#mapa-parrillas" class="border border-carbon px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-white transition">
+                    Ver en el mapa
+                </a>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Bodegón de All Boys -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/allboys.jpg" alt="Milanesa a la napolitana con papas fritas en el Bodegón de All Boys" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">Bodegón de All Boys</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Está dentro del club All Boys, en pleno Floresta, y se nota: camisetas en las paredes, banderines y mesas largas llenas de familias y amigos. La carta es de bodegón clásico, con minutas, pastas caseras y milanesas para compartir entre dos o tres personas.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Porque junta dos cosas muy porteñas: el fútbol de barrio y la comida abundante. Nuestra recomendación es la milanesa a la napolitana con fritas y un flan con dulce de leche de postre.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Mercedes 1951, Floresta, CABA</p>
+                        <p><strong>Horario:</strong> Martes a domingo de 12:00 a 16:00 y de 20:00 a 00:00 hs</p>
+                        <p><strong>Duración de la visita:</strong> Entre 1 hora y media y 2 horas</p>
+                        <p><strong>Medios de pago:</strong> Consultar antes de ir, muchos bodegones prefieren efectivo</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- El Ferroviario -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/ferroviario.jpg" alt="Parrilla con asado, chorizos y provoleta en El Ferroviario" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">El Ferroviario</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Una de las parrillas más conocidas del oeste, a pocas cuadras de la estación Liniers del tren Sarmiento. Funciona en un galpón enorme y es famosa por su parrilla libre: achuras, provoleta, asado, vacío, matambre y hasta cordero y lechón. También tiene pastas, milanesas y postres clásicos.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Si querés probar muchos cortes en una sola comida, este es el lugar. Y si te animás, de entrada tienen cosas poco comunes como ciervo o yacaré.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Reservistas Argentinos 219, Liniers, CABA</p>
+                        <p><strong>Horario:</strong> Martes a domingo de 12:00 a 16:00 y de 20:00 a 00:30 hs</p>
+                        <p><strong>Duración de la visita:</strong> 2 horas aprox.</p>
+                        <p><strong>Cómo llegar:</strong> Tren Sarmiento, estación Liniers</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- La Miralla -->
+            <article class="bg-white rounded-lg border border-topo overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <img src="img/lamiralla.jpg" alt="Bife de chorizo con papas fritas en la parrilla La Miralla" class="w-full h-64 object-cover">
+                    <div class="p-6 space-y-4">
+                        <h2 class="text-2xl font-bold">La Miralla</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Parrilla de barrio de toda la vida sobre la avenida Eva Perón. Es un punto de encuentro clásico de la zona, con mozos de siempre, mantel y porciones generosas. La carne sale a la parrilla y se acompaña con papas fritas, ensaladas y un buen vino de la casa.
+                        </p>
+                        <div class="bg-crema/60 p-3 rounded-lg border border-topo/50 text-xs text-gray-700 space-y-1">
+                            <p class="font-semibold text-carbon">¿Por qué visitarlo?</p>
+                            <p>Es el bodegón más tranquilo de los tres, ideal para una comida sin apuro. Lo mejor es pedir un bife de chorizo o una parrillada para compartir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <div class="bg-crema p-4 rounded text-xs space-y-1 text-gray-700 border border-topo">
+                        <p><strong>Ubicación:</strong> Av. Eva Perón 7201, CABA</p>
+                        <p><strong>Horario:</strong> Martes a domingo de 12:00 a 16:00 y de 20:00 a 00:00 hs</p>
+                        <p><strong>Duración de la visita:</strong> Entre 1 hora y media y 2 horas</p>
+                        <p><strong>Medios de pago:</strong> Consultar antes de ir</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Actividades -->
+        <section class="bg-white p-6 rounded-lg border border-topo space-y-3">
+            <h2 class="text-xl font-bold">¿Qué podés hacer en este recorrido?</h2>
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 leading-relaxed">
+                <li><strong>Comer como en casa:</strong> probar milanesas a la napolitana, empanadas, pastas caseras y cortes a la parrilla.</li>
+                <li><strong>Vivir el barrio:</strong> almorzar o cenar en un club de fútbol y en dos parrillas clásicas del oeste porteño.</li>
+                <li><strong>Sacar fotos:</strong> los salones, las paredes con historia y los platos son muy fotogénicos.</li>
+            </ul>
+        </section>
+
+        <!-- Mapa -->
+        <section id="mapa-parrillas" class="space-y-4">
+            <h2 class="text-xl font-bold">Dónde quedan</h2>
+            <p class="text-sm text-gray-700">Los tres lugares están en el oeste de la ciudad y quedan bastante cerca entre sí. Te recomendamos ir al Bodegón de All Boys o a La Miralla al mediodía y dejar El Ferroviario para la cena.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <iframe src="https://maps.google.com/maps?q=Mercedes%201951,%20CABA&output=embed" title="Mapa del Bodegón de All Boys" class="w-full h-64 rounded-lg border border-topo" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=Reservistas%20Argentinos%20219,%20CABA&output=embed" title="Mapa de El Ferroviario" class="w-full h-64 rounded-lg border border-topo" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=Av.%20Eva%20Per%C3%B3n%207201,%20CABA&output=embed" title="Mapa de La Miralla" class="w-full h-64 rounded-lg border border-topo" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Recomendaciones -->
+        <section class="bg-white p-6 rounded-lg border border-topo space-y-3">
+            <h2 class="text-xl font-bold">Recomendaciones para tu visita</h2>
+            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1 leading-relaxed">
+                <li><strong>Reservá con tiempo:</strong> los fines de semana se llenan y la espera puede ser larga. Con la reserva del recorrido te asegurás la mesa.</li>
+                <li><strong>Las porciones son grandes:</strong> muchos platos alcanzan para dos o más personas, preguntale al mozo antes de pedir de más.</li>
+                <li><strong>Medios de pago:</strong> consultá antes si aceptan tarjeta, algunos bodegones trabajan más con efectivo.</li>
+            </ul>
+        </section>
+
+        <!-- Otros recorridos -->
+        <section class="space-y-3">
+            <h2 class="text-xl font-bold">Seguí recorriendo</h2>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="index.html" class="bg-white border border-topo px-4 py-2 rounded-full hover:bg-nude transition">← Volver al inicio</a>
+                <a href="merienda.html" class="bg-white border border-topo px-4 py-2 rounded-full hover:bg-nude transition">Meriendas</a>
+                <a href="fastfood.html" class="bg-white border border-topo px-4 py-2 rounded-full hover:bg-nude transition">Fast Food</a>
+                <a href="bares.html" class="bg-white border border-topo px-4 py-2 rounded-full hover:bg-nude transition">Bares & Night</a>
+                <a href="internacional.html" class="bg-white border border-topo px-4 py-2 rounded-full hover:bg-nude transition">Internacional</a>
+            </div>
+        </section>
+
+        <!-- Formulario de Consultas -->
+        <section class="bg-white p-6 md:p-8 rounded-lg border border-topo max-w-2xl mx-auto space-y-6">
+            <h2 class="text-2xl font-bold text-center">Consultas</h2>
+            <form id="contact-form" class="space-y-4" novalidate>
+                <div>
+                    <label for="contact-name" class="block text-sm font-medium">Nombre completo</label>
+                    <input type="text" id="contact-name" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required>
+                    <span id="name-error" class="text-xs text-red-500 hidden">Por favor ingresá tu nombre.</span>
+                </div>
+                <div>
+                    <label for="contact-email" class="block text-sm font-medium">Correo Electrónico</label>
+                    <input type="email" id="contact-email" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required>
+                    <span id="email-error" class="text-xs text-red-500 hidden">Ingresá un correo electrónico válido.</span>
+                </div>
+                <div>
+                    <label for="contact-reason" class="block text-sm font-medium">Motivo de la consulta</label>
+                    <select id="contact-reason" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon">
+                        <option value="recomendacion">Recomendar un local</option>
+                        <option value="recorrido">Dudas sobre los recorridos / reservas</option>
+                        <option value="menu">Dudas sobre opciones celíacas / veganas</option>
+                        <option value="otro">Consulta general</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="contact-message" class="block text-sm font-medium">Mensaje</label>
+                    <textarea id="contact-message" rows="4" class="w-full border border-topo rounded p-2 text-sm mt-1 focus:outline-none focus:ring-1 focus:ring-carbon" required></textarea>
+                    <span id="message-error" class="text-xs text-red-500 hidden">El mensaje no puede estar vacío.</span>
+                </div>
+                <button type="submit" class="w-full bg-carbon text-crema font-bold py-2.5 rounded hover:bg-opacity-90 transition">
+                    Enviar Consulta (Simulación)
+                </button>
+            </form>
+            <div id="contact-alert" class="hidden p-4 bg-green-100 border border-green-400 text-green-800 rounded text-sm text-center"></div>
+        </section>
+
+        <!-- Chatbot -->
+        <section class="bg-white p-6 rounded-lg border border-topo max-w-2xl mx-auto space-y-4">
+            <h2 class="text-xl font-bold flex items-center space-x-2">
+                <span>Asistente Virtual LASTRANDO</span>
+            </h2>
+            <div id="chat-window" class="h-48 border border-topo rounded p-3 overflow-y-auto space-y-2 bg-crema text-xs">
+                <div class="bg-white p-2 rounded max-w-xs border border-topo">
+                    ¡Hola! Soy el asistente gastronómico de Lastrando. ¿Tenés dudas sobre las reservas, los horarios de los recorridos o los medios de pago?
+                </div>
+            </div>
+            <div class="flex space-x-2">
+                <input type="text" id="chat-input" placeholder="Escribí tu pregunta acá..." aria-label="Escribí tu pregunta" class="flex-grow border border-topo rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-carbon">
+                <button id="chat-send" class="bg-nude px-4 py-1.5 font-bold rounded text-sm hover:bg-opacity-80 transition">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-carbon text-crema py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-bold text-base">LASTRANDO © 2026</p>
+            <p class="text-xs text-topo">Materia: Diseño y Desarrollo Web • UADE | Punto de Interés 2: Sol Blanco</p>
+        </div>
+    </footer>
+</body>
+</html>
