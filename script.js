@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fastfood: {
             title: "Recorrido Fast Food & Hamburgueserías de Autor",
             places: [
-                "<strong>Félix Burgers:</strong> Av. Francisco Beiró 4473, Devoto (CABA)",
                 "<strong>Kalis Pizza:</strong> Av. Cabildo 3500, Núñez (CABA)",
+                "<strong>Big Pons:</strong> Fitz Roy 1731 (Palermo)",
                 "<strong>Kiddo:</strong> Honduras 5265, Palermo (CABA)",
                 "<strong>Frank's Grill:</strong> Cabello 3401 (Palermo)"
             ]
