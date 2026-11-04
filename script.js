@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Recorrido Parrillas & Bodegones Tradicionales",
             places: [
                 "<strong>Bodegón de All Boys:</strong> Mercedes 1951, Floresta (CABA)",
-                "<strong>El Ferroviario:</strong> Reservistas Argentinos 219, Liniers (CABA)",
-                "<strong>La Miralla:</strong> Av. Eva Perón 7201 (CABA)"
+                "<strong>El Ferroviario:</strong> Reservistas Argentinos 219, Liniers (CABA)"
             ]
         },
         bares: {
@@ -59,7 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Recorrido Comida Internacional & Sabores del Mundo",
             places: [
                 "<strong>Fabric Sushi:</strong> Av. Pedro Goyena 100, Caballito (CABA)",
-                "<strong>Kansas Grill:</strong> Av. del Libertador 105, San Isidro (GBA Norte)"
+                "<strong>Kansas Grill:</strong> Av. del Libertador 4625 (CABA)",
+                "<strong>Pasta Rossa:</strong> Av. Córdoba 1750, Palermo (CABA)",
+                "<strong>Tucson Hipódromo:</strong> Av. del Libertador 4241 (CABA)"
             ]
         }
     };
